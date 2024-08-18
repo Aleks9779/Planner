@@ -1,0 +1,18 @@
+Planner:
+Okno nr. 1:
+1. Wybor roku.
+2. Wybor miesiaca.
+3. Przycisk: "Pokaz" i "Dodaj".
+Okno nr. 2:
+4. Pojawienie sie okienka z polami do uzupelnienia.
+5. Wybor rodzaju czynnosci - DropDown Menu lub dodanie kategorii (jako pop up window lub jakis efektywniejszy sposob np. nowa karta...).
+6. Zdefiniowanie ilosci czasu w minutach, ile to ma zajac.
+6. Dodanie opcjonalnie notatki.
+7. Dodanie opcjonalnie zarobionych pieniazkow.
+8. Dodanie opcjonalnie wydanych pieniazkow.
+6. Dodanie opcjonalnie multimediow.
+9. Przycisk: "Dodaj do planera". Dodanie zadania do tabelki z zadaniami na wybrany dzien miesiaca i roku i zaktualizowanie i pokazanie tabelki.
+10. Ostatni wiersz pokazuje podsumowanie ilosci godzin i innych wartosci. Tam jest tez przycisk "Zapisz dzien jako..." i mozliwosc zapisania danych z json w formie np. pliku tekstowego wraz z diagramem.
+11. Przycisk: "pokaz diagram". Mozliwe wygenerowanie diagramu na konkretny dzien.
+12. Przycisk: "podglad miesiaca", ktory pokazuje w formie tabelki podsumowania kazdego dnia. Tam znajduje sie tez przycisk "pokaz diagram" i pokaz "podglad roczny". Tam jest tez przycisk "Zapisz miesiac jako..." i mozliwosc zapisania danych z json w formie np. pliku tekstowego wraz z diagramem.
+13. Przycisk: "powrot do panelu glownego".

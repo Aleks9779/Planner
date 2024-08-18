@@ -1,0 +1,116 @@
+<MainScreen>:
+    BoxLayout:
+        orientation: 'vertical'
+        padding: 10
+        spacing: 10
+
+        BoxLayout:
+            orientation: 'horizontal'
+            Label:
+                text: 'Wybór roku:'
+            Spinner:
+                id: year_spinner
+                text: '2024'
+                values: [str(year) for year in range(2000, 2031)]
+
+        BoxLayout:
+            orientation: 'horizontal'
+            Label:
+                text: 'Wybór miesiąca:'
+            Spinner:
+                id: month_spinner
+                text: 'Styczeń'
+                values: ['Styczeń', 'Luty', 'Marzec', 'Kwiecień', 'Maj', 'Czerwiec', 'Lipiec', 'Sierpień', 'Wrzesień', 'Październik', 'Listopad', 'Grudzień']
+
+        BoxLayout:
+            orientation: 'horizontal'
+            Button:
+                text: 'Pokaz'
+                on_press: root.show_selected_month()
+            Button:
+                text: 'Dodaj'
+                on_press: root.add_new_activity()
+
+<AddActivityScreen>:
+    BoxLayout:
+        orientation: 'vertical'
+        padding: 10
+        spacing: 10
+
+        BoxLayout:
+            orientation: 'horizontal'
+            Label:
+                text: 'Wybór typu czynności:'
+            Spinner:
+                id: activity_type_spinner
+                text: 'Wybierz kategorię'
+                values: ['Praca', 'Nauka', 'Relaks', 'Inne']
+            Button:
+                text: 'Dodaj kategorię'
+                on_press: root.add_category()
+
+        BoxLayout:
+            orientation: 'horizontal'
+            Label:
+                text: 'Czas (min):'
+            TextInput:
+                id: time_input
+                hint_text: 'Wprowadź czas'
+
+        BoxLayout:
+            orientation: 'horizontal'
+            Label:
+                text: 'Notatka:'
+            TextInput:
+                id: note_input
+                hint_text: 'Wprowadź notatkę'
+                multiline: True
+
+        BoxLayout:
+            orientation: 'horizontal'
+            Label:
+                text: 'Zarobki:'
+            TextInput:
+                id: earnings_input
+                hint_text: 'Wprowadź zarobki'
+
+        BoxLayout:
+            orientation: 'horizontal'
+            Label:
+                text: 'Wydatki:'
+            TextInput:
+                id: expenses_input
+                hint_text: 'Wprowadź wydatki'
+
+        Button:
+            text: 'Dodaj do planera'
+            on_press: root.add_activity_to_planner()
+
+        Button:
+            text: 'Zapisz dzień jako...'
+            on_press: root.save_day()
+
+        Button:
+            text: 'Pokaż diagram'
+            on_press: root.show_diagram()
+
+<MonthViewScreen>:
+    BoxLayout:
+        orientation: 'vertical'
+        padding: 10
+        spacing: 10
+
+        DataGrid:
+            id: monthly_summary_grid
+
+        Button:
+            text: 'Pokaż diagram'
+            on_press: root.show_monthly_diagram()
+
+        Button:
+            text: 'Zapisz miesiąc jako...'
+            on_press: root.save_month()
+
+        Button:
+            text: 'Powrót do panelu głównego'
+            on_press: root.return_to_main()
